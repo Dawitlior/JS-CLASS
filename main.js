@@ -56,13 +56,23 @@ myArray.forEach((i) => {
 });
 
 9;
-// class Teacher{
-//     constructor(firstName,lastName,claas,email){
-//         this.firstName = firstName;
-//         this.lastName = lastName;
-//         this.claas = claas;
-//         this.email = email;
-//     }
-// }
+class Teacher{
+    constructor(firstName,lastName,claas,email){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.claas = claas;
+        this.email = email;
+    }
+}
+let myArray1 = [];
+btn.onclick()=>{
+    let some = new Teacher(firstNa.value,lastNa.value,techerOf.value,email1.value);
+    myArray1.push(some);
+    if(myArray1.length==5){
+        myArray1.forEach(item => {
+            
+        });
+    }
+};
 
 11;
