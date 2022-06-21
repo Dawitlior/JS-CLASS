@@ -57,53 +57,56 @@
 // });
 
 9;
-// const newArray = [];
-// function printTheKeyAndValue() {
-//   class Teacher {
-//     constructor(firstName, lastName, course, email) {
-//       this.firstName = firstName;
-//       this.lastName = lastName;
-//       this.course = course;
-//       this.email = email;
-//     }
-//   }
-//   let teacher1 = new Teacher(
-//     fName.value,
-//     lName.value,
-//     id_course.value,
-//     email.value
-//   );
-//   if (newArray.length < 4) {
-//     newArray.push(teacher1);
-//     let tbody = document.getElementById("tbody");
-//     newArray.forEach((item) => {
-//       for (const key in item) {
-//         th.innerHTML += `${key}`;
-//         tr.innerHTML += `<td>${item[key]}</td>`;
-//       }
-//     });
-//   }
-// }
+const newArray = [];
+function printTheKeyAndValue() {
+  class Teacher {
+    constructor(firstName, lastName, course, email) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.course = course;
+      this.email = email;
+    }
+  }
+  let teacher1 = new Teacher(
+    fName.value,
+    lName.value,
+    id_course.value,
+    email.value
+  );
+  if (newArray.length < 4) {
+    newArray.push(teacher1);
+    let tbody = document.getElementById("tbody");
+    newArray.forEach((item) => {
+      for (const key in item) {
+        th.innerHTML += `${key}`;
+        tr.innerHTML += `<td>${item[key]}</td>`;
+      }
+    });
+  }
+}
 
 11+12
 class course1 {
-  constructor(firName, hadTeacher, gradeList = [], studentList = []) {
+  constructor(firName, hadTeacher, gradeList , studentList ) {
     this.firName = firName;
     this.hadTeacher = hadTeacher;
     this.gradeList = gradeList;
     this.studentList = studentList;
   }
 }
-let grades = [69,75,96,54,77,86];
-let student = ["lior","aldad","avraham","dalia","yosi"];
-let techCareer = new course1("lior",true,grades,student)
+
+let techCareer = new course1("lior", true, [69, 75, 96, 54, 77, 86], ["lior","yaso","maor","eldad","david"]);
 console.log(techCareer);
 
 for(const key in techCareer){
   my_p.innerHTML += `${techCareer[key]}`
 }
 12.
-console.log(student.sort());
-13.
-console.log(grades.sort((a,b)=>{return a-b}));
-
+techCareer.studentList.sort().forEach( student => {
+    my_p.innerHTML += `${student}`;
+})
+    
+    13.
+    techCareer.gradeList.sort().forEach( student => {
+        my_p.innerHTML += `${student}`;
+    });
